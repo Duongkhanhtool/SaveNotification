@@ -1,0 +1,135 @@
+<title>Privacy Policy — Save Notification</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --bg: #FFFFFF; --fg: #1E293B; --fg-sub: #64748B;
+  --accent: #4F46E5; --border: #E2E8F0; --bg-section: #F8FAFC;
+  --font: 'Inter', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F172A; --fg: #F1F5F9; --fg-sub: #94A3B8;
+    --accent: #818CF8; --border: #334155; --bg-section: #1E293B;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F172A; --fg: #F1F5F9; --fg-sub: #94A3B8;
+  --accent: #818CF8; --border: #334155; --bg-section: #1E293B;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font);
+  line-height: 1.8; max-width: 760px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px;
+}
+h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 8px; text-wrap: balance; }
+.subtitle { color: var(--fg-sub); font-size: 0.95rem; margin-bottom: 32px; }
+h2 { font-size: 1.15rem; font-weight: 600; margin: 28px 0 10px; color: var(--accent); }
+p, li { font-size: 0.95rem; color: var(--fg); margin-bottom: 10px; }
+ul { padding-left: 20px; }
+li { margin-bottom: 6px; }
+.section { background: var(--bg-section); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-bottom: 16px; }
+.section h2 { margin-top: 0; }
+strong { font-weight: 600; }
+a { color: var(--accent); }
+.footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--fg-sub); font-size: 0.85rem; }
+</style>
+
+<h1>Privacy Policy</h1>
+<p class="subtitle">Save Notification — Windows Notification Storage App<br>Last updated: November 7, 2026</p>
+
+<div class="section">
+<h2>1. Overview</h2>
+<p>Save Notification ("the App") is a Windows desktop application that saves, manages, and searches Windows notifications locally on your device. We are committed to protecting your privacy. This Privacy Policy explains what data the App collects, how it is used, and your rights regarding that data.</p>
+</div>
+
+<div class="section">
+<h2>2. Data Collection</h2>
+<p><strong>The App does NOT collect, transmit, or store any personal data on external servers.</strong></p>
+<p>All data is stored exclusively on your local device in a SQLite database located at:</p>
+<p><code>%LOCALAPPDATA%\SaveNotification\notifications.db</code></p>
+<p>The types of data stored locally include:</p>
+<ul>
+  <li><strong>Notification content</strong> — title, message text, and timestamp of Windows toast notifications from apps you choose to monitor</li>
+  <li><strong>App identifiers</strong> — names of applications that send notifications (e.g., "Microsoft Edge", "Telegram")</li>
+  <li><strong>User preferences</strong> — language setting, starred notifications, monitored app list, and Telegram configuration (if enabled by user)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. Data Storage & Security</h2>
+<ul>
+  <li>All data is stored <strong>locally on your device only</strong></li>
+  <li>No data is sent to our servers or any third-party servers</li>
+  <li>No cloud sync, no analytics, no tracking</li>
+  <li>The database file is protected by your Windows user account permissions</li>
+  <li>You can delete all data at any time by using the "Clean up" feature in the App or by deleting the database file directly</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>4. Telegram Integration (Optional)</h2>
+<p>The App offers an <strong>optional</strong> feature to forward notifications to a Telegram bot. This feature is:</p>
+<ul>
+  <li><strong>Disabled by default</strong> — you must explicitly enable it and provide your own Bot Token and Chat ID</li>
+  <li><strong>Direct communication</strong> — when enabled, notification data is sent directly from your device to the Telegram Bot API (<code>api.telegram.org</code>). No data passes through our servers</li>
+  <li><strong>User-controlled</strong> — you can disable this feature at any time in Settings, and no further data will be sent</li>
+  <li><strong>Your credentials</strong> — Bot Token and Chat ID are stored locally on your device and are never shared with us</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>5. Windows Notification Access</h2>
+<p>The App uses the Windows <code>UserNotificationListener</code> API to read toast notifications. This requires your explicit permission through Windows Settings. The App:</p>
+<ul>
+  <li>Only reads notifications from apps <strong>you choose to monitor</strong></li>
+  <li>Does not modify or interact with notifications in any way</li>
+  <li>Does not read notification content from apps you have not enabled for monitoring</li>
+  <li>You can revoke notification access at any time via <strong>Windows Settings → System → Notifications</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h2>6. Third-Party Services</h2>
+<p>The App does not integrate with any third-party analytics, advertising, or tracking services. The only external service the App may communicate with is:</p>
+<ul>
+  <li><strong>Telegram Bot API</strong> (<code>api.telegram.org</code>) — only when you explicitly enable and configure the Telegram forwarding feature</li>
+  <li><strong>Microsoft Store</strong> — for license verification and in-app purchases (handled by the Windows operating system, not by the App)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>7. Children's Privacy</h2>
+<p>The App does not knowingly collect any personal information from children under the age of 13. The App stores only notification data generated by other applications on the user's device.</p>
+</div>
+
+<div class="section">
+<h2>8. Your Rights</h2>
+<p>You have full control over your data:</p>
+<ul>
+  <li><strong>View</strong> — all saved notifications are visible in the App</li>
+  <li><strong>Delete</strong> — delete individual notifications, or use "Clean up" to remove old data</li>
+  <li><strong>Export</strong> — export your data to CSV format (Pro feature)</li>
+  <li><strong>Complete removal</strong> — uninstalling the App removes all local data</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>9. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+</div>
+
+<div class="section">
+<h2>10. Contact</h2>
+<p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+<p><strong>Email:</strong> duongkhanhtool@gmail.com</p>
+</div>
+
+<div class="footer">
+  <p>© 2026 NasaStore. All rights reserved.<br>
+  Save Notification is a product of NasaStore, published on Microsoft Store.</p>
+</div>
